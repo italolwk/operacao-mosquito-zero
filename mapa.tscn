@@ -1,0 +1,231 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://mapa.gd" id="1"]
+[ext_resource type="PackedScene" path="res://jogador.tscn" id="2"]
+[ext_resource type="Texture2D" path="res://assets/itens/balde.png" id="3"]
+[ext_resource type="Script" path="res://pneu_visual.gd" id="4"]
+[ext_resource type="Texture2D" path="res://assets/cenarios/fundo_gameplay_ilustrado.png" id="5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_house"]
+size = Vector2(300, 180)
+
+[node name="Mapa" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="CenarioPixelArt" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+z_index = -100
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 6
+texture_filter = 1
+mouse_filter = 2
+
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.40, 0.64, 0.34, 1)
+mouse_filter = 2
+
+[node name="Rua" type="ColorRect" parent="."]
+visible = false
+offset_top = 259.0
+offset_right = 1152.0
+offset_bottom = 405.0
+color = Color(0.24, 0.30, 0.35, 1)
+mouse_filter = 2
+
+[node name="FaixaRua" type="ColorRect" parent="Rua"]
+offset_left = 20.0
+offset_top = 69.0
+offset_right = 1130.0
+offset_bottom = 76.0
+color = Color(0.96, 0.82, 0.42, 0.75)
+mouse_filter = 2
+
+[node name="CalcadaSuperior" type="ColorRect" parent="."]
+visible = false
+offset_top = 237.0
+offset_right = 1152.0
+offset_bottom = 259.0
+color = Color(0.78, 0.77, 0.67, 1)
+mouse_filter = 2
+
+[node name="CalcadaInferior" type="ColorRect" parent="."]
+visible = false
+offset_top = 405.0
+offset_right = 1152.0
+offset_bottom = 427.0
+color = Color(0.78, 0.77, 0.67, 1)
+mouse_filter = 2
+
+[node name="Residencia" type="ColorRect" parent="."]
+visible = false
+offset_left = 80.0
+offset_top = 61.0
+offset_right = 380.0
+offset_bottom = 227.0
+color = Color(0.93, 0.79, 0.62, 1)
+mouse_filter = 2
+
+[node name="Telhado" type="ColorRect" parent="Residencia"]
+offset_top = -9.0
+offset_right = 300.0
+offset_bottom = 37.0
+color = Color(0.63, 0.30, 0.18, 1)
+mouse_filter = 2
+
+[node name="Porta" type="ColorRect" parent="Residencia"]
+offset_left = 122.0
+offset_top = 75.0
+offset_right = 182.0
+offset_bottom = 166.0
+color = Color(0.38, 0.24, 0.17, 1)
+mouse_filter = 2
+
+[node name="Janela1" type="ColorRect" parent="Residencia"]
+offset_left = 24.0
+offset_top = 54.0
+offset_right = 88.0
+offset_bottom = 108.0
+color = Color(0.30, 0.70, 0.76, 1)
+mouse_filter = 2
+
+[node name="Janela2" type="ColorRect" parent="Residencia"]
+offset_left = 213.0
+offset_top = 54.0
+offset_right = 277.0
+offset_bottom = 108.0
+color = Color(0.30, 0.70, 0.76, 1)
+mouse_filter = 2
+
+[node name="ObstaculoCasa" type="StaticBody2D" parent="."]
+position = Vector2(230, 155)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstaculoCasa"]
+shape = SubResource("RectangleShape2D_house")
+
+[node name="Terreno" type="ColorRect" parent="."]
+offset_left = 700.0
+offset_top = 65.0
+offset_right = 1052.0
+offset_bottom = 235.0
+color = Color(0, 0, 0, 0)
+mouse_filter = 2
+
+[node name="Pneu" type="ColorRect" parent="Terreno"]
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 144.0
+offset_bottom = 132.0
+color = Color(0, 0, 0, 0)
+mouse_filter = 2
+script = ExtResource("4")
+
+[node name="Balde" type="TextureRect" parent="Terreno"]
+offset_left = 205.0
+offset_top = 68.0
+offset_right = 279.0
+offset_bottom = 142.0
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Jogador" parent="." instance=ExtResource("2")]
+position = Vector2(450, 352)
+
+[node name="MosquitosLabel" type="Label" parent="."]
+visible = false
+offset_left = 22.0
+offset_top = 64.0
+offset_right = 270.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 19
+text = "Mosquitos: 0"
+
+[node name="MissaoLabel" type="Label" parent="."]
+visible = false
+offset_left = 350.0
+offset_top = 14.0
+offset_right = 805.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 18
+text = "OBJETIVO: elimine os mosquitos"
+horizontal_alignment = 1
+
+[node name="OndaLabel" type="Label" parent="."]
+offset_left = 990.0
+offset_top = 18.0
+offset_right = 1130.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 22
+text = "ONDA 1 / 7"
+
+[node name="OndaMensagemLabel" type="Label" parent="."]
+visible = false
+z_index = 100
+offset_left = 322.0
+offset_top = 240.0
+offset_right = 830.0
+offset_bottom = 305.0
+theme_override_font_sizes/font_size = 42
+text = "ONDA 2"
+horizontal_alignment = 1
+
+[node name="GameOverFundo" type="ColorRect" parent="."]
+visible = false
+z_index = 100
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.02, 0.07, 0.12, 0.82)
+mouse_filter = 2
+
+[node name="GameOverLabel" type="Label" parent="."]
+visible = false
+z_index = 101
+offset_left = 280.0
+offset_top = 203.0
+offset_right = 872.0
+offset_bottom = 294.0
+theme_override_font_sizes/font_size = 52
+text = "FIM DE JOGO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotaoReiniciar" type="Button" parent="GameOverLabel"]
+visible = false
+offset_left = 153.0
+offset_top = 125.0
+offset_right = 445.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 21
+text = "JOGAR NOVAMENTE"
+
+[node name="BarraHP" type="ProgressBar" parent="."]
+offset_left = 65.0
+offset_top = 17.0
+offset_right = 285.0
+offset_bottom = 49.0
+value = 100.0
+show_percentage = false
+
+[node name="HPLabel" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 21.0
+offset_right = 62.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 18
+text = "HP"

@@ -1,0 +1,63 @@
+[gd_resource type="SpriteFrames" load_steps=37 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_baixo_00.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_baixo_01.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_baixo_02.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_baixo_03.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_cima_00.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_cima_01.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_cima_02.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_cima_03.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_esquerda_00.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_esquerda_01.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_esquerda_02.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_esquerda_03.png" id="12"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_direita_00.png" id="13"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_direita_01.png" id="14"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_direita_02.png" id="15"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/andar_direita_03.png" id="16"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/atirar_00.png" id="17"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/atirar_01.png" id="18"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/atirar_02.png" id="19"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/atirar_03.png" id="20"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/ferido_00.png" id="21"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/ferido_01.png" id="22"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/ferido_02.png" id="23"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/ferido_03.png" id="24"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/coletar_kit_00.png" id="25"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/coletar_kit_01.png" id="26"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/coletar_kit_02.png" id="27"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/coletar_kit_03.png" id="28"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/coletar_cruzeiro_00.png" id="29"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/coletar_cruzeiro_01.png" id="30"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/coletar_cruzeiro_02.png" id="31"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/coletar_cruzeiro_03.png" id="32"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/morrer_00.png" id="33"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/morrer_01.png" id="34"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/morrer_02.png" id="35"]
+[ext_resource type="Texture2D" path="res://assets/agente_spray_novo/morrer_03.png" id="36"]
+
+[resource]
+animations = [
+{"frames": [{"duration": 1.0, "texture": ExtResource("1")}], "loop": true, "name": &"parado", "speed": 5.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("1")}], "loop": true, "name": &"parado_frente", "speed": 5.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("5")}], "loop": true, "name": &"parado_costas", "speed": 5.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("9")}], "loop": true, "name": &"parado_esquerda", "speed": 5.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("13")}], "loop": true, "name": &"parado_direita", "speed": 5.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("13")}], "loop": true, "name": &"parado_lado", "speed": 5.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("1")}], "loop": true, "name": &"pronto", "speed": 5.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("1")}, {"duration": 1.0, "texture": ExtResource("2")}, {"duration": 1.0, "texture": ExtResource("3")}, {"duration": 1.0, "texture": ExtResource("4")}], "loop": true, "name": &"andar_baixo", "speed": 8.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("1")}, {"duration": 1.0, "texture": ExtResource("2")}, {"duration": 1.0, "texture": ExtResource("3")}, {"duration": 1.0, "texture": ExtResource("4")}], "loop": true, "name": &"correr_baixo", "speed": 12.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("5")}, {"duration": 1.0, "texture": ExtResource("6")}, {"duration": 1.0, "texture": ExtResource("7")}, {"duration": 1.0, "texture": ExtResource("8")}], "loop": true, "name": &"andar_cima", "speed": 8.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("5")}, {"duration": 1.0, "texture": ExtResource("6")}, {"duration": 1.0, "texture": ExtResource("7")}, {"duration": 1.0, "texture": ExtResource("8")}], "loop": true, "name": &"correr_cima", "speed": 12.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("9")}, {"duration": 1.0, "texture": ExtResource("10")}, {"duration": 1.0, "texture": ExtResource("11")}, {"duration": 1.0, "texture": ExtResource("12")}], "loop": true, "name": &"andar_esquerda", "speed": 8.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("9")}, {"duration": 1.0, "texture": ExtResource("10")}, {"duration": 1.0, "texture": ExtResource("11")}, {"duration": 1.0, "texture": ExtResource("12")}], "loop": true, "name": &"correr_esquerda", "speed": 12.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("13")}, {"duration": 1.0, "texture": ExtResource("14")}, {"duration": 1.0, "texture": ExtResource("15")}, {"duration": 1.0, "texture": ExtResource("16")}], "loop": true, "name": &"andar_direita", "speed": 8.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("13")}, {"duration": 1.0, "texture": ExtResource("14")}, {"duration": 1.0, "texture": ExtResource("15")}, {"duration": 1.0, "texture": ExtResource("16")}], "loop": true, "name": &"correr_direita", "speed": 12.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("13")}, {"duration": 1.0, "texture": ExtResource("14")}, {"duration": 1.0, "texture": ExtResource("15")}, {"duration": 1.0, "texture": ExtResource("16")}], "loop": true, "name": &"correr", "speed": 12.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("17")}, {"duration": 1.0, "texture": ExtResource("18")}, {"duration": 1.0, "texture": ExtResource("19")}, {"duration": 1.0, "texture": ExtResource("20")}], "loop": false, "name": &"atirar", "speed": 12.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("21")}, {"duration": 1.0, "texture": ExtResource("22")}, {"duration": 1.0, "texture": ExtResource("23")}, {"duration": 1.0, "texture": ExtResource("24")}], "loop": false, "name": &"ferido", "speed": 10.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("25")}, {"duration": 1.0, "texture": ExtResource("26")}, {"duration": 1.0, "texture": ExtResource("27")}, {"duration": 1.0, "texture": ExtResource("28")}], "loop": false, "name": &"coletar_kit", "speed": 10.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("29")}, {"duration": 1.0, "texture": ExtResource("30")}, {"duration": 1.0, "texture": ExtResource("31")}, {"duration": 1.0, "texture": ExtResource("32")}], "loop": false, "name": &"coletar_cruzeiro", "speed": 10.0},
+{"frames": [{"duration": 1.0, "texture": ExtResource("33")}, {"duration": 1.0, "texture": ExtResource("34")}, {"duration": 1.0, "texture": ExtResource("35")}, {"duration": 1.0, "texture": ExtResource("36")}], "loop": false, "name": &"morrer", "speed": 10.0}
+]

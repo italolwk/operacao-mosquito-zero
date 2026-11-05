@@ -1,0 +1,119 @@
+OPERAÇÃO MOSQUITO ZERO — EDIÇÃO ATUALIZADA
+===========================================
+
+Projeto-fonte 2D para Godot 4.3+. Abra project.godot no editor Godot e
+execute com F6/F5. Este ZIP contém os fontes e recursos; não é um .EXE.
+
+CONTROLES
+---------
+WASD / Setas = mover
+SHIFT = correr
+1 = agente do balde
+2 = agente do inseticida
+TAB = alternar agentes
+ESPAÇO = aplicar spray
+E = interagir com o balde após o chefe e com o pneu
+
+PROGRESSÃO
+----------
+Ondas 1 a 4: cada mosquito comum recebe 1 spray.
+Ondas 5 e 6: cada mosquito comum recebe 2 sprays e fica mais lento
+individualmente quando perde vida.
+O número de inimigos cresce progressivamente, sem aumento de velocidade
+por onda. A onda 7 contém somente o chefe Mosquito-mãe.
+
+CHEFE E FINAL
+-------------
+O Mosquito-mãe tem 30 pontos de vida, barra própria e voo em arcos.
+Ao ser derrotado, deixa cair o balde. Pegue-o com E, aproxime-se do
+pneu com água e pressione E novamente para retirar a água parada.
+A água diminui em animação e a tela MISSÃO CUMPRIDA é exibida.
+
+PODER CRUZEIRO DO SUL
+---------------------
+O símbolo original em laranja é um power-up raro. Ao coletá-lo, recupera
+até 2 pontos de vida, amplia temporariamente a vida máxima, aumenta o
+dano do spray e melhora o intervalo de disparo e a velocidade do jogador
+por 5 segundos.
+
+EDUCAÇÃO
+--------
+Mensagens curtas entre ondas lembram que o Aedes aegypti pode transmitir
+dengue, zika e chikungunya e que caixas-d'água e pneus devem ser protegidos
+para evitar água parada.
+
+ARQUIVOS IMPORTANTES
+--------------------
+main.tscn / main.gd       Menu
+mapa.tscn / mapa.gd       Cenário, ondas, HUD e encerramento
+jogador.tscn / jogador.gd Jogador, spray, vida e power-up
+mosquito.tscn / mosquito.gd Inimigos comuns
+chefe.tscn / chefe.gd     Chefe final
+pneu_visual.gd            Desenho e animação do pneu
+mosquito_visual.gd        Aparência Aedes aegypti estilizada
+assets/                   Sprites e imagens originais
+
+VALIDAÇÃO
+---------
+Os arquivos e referências foram revisados estaticamente. O ambiente de
+edição desta entrega não possui o executável Godot disponível, portanto
+não foi possível executar o projeto dentro do editor ou validar colisões
+e animações em tempo real. Abra no Godot 4.3+ e verifique a primeira
+execução; o editor poderá gerar arquivos .uid/import automaticamente.
+
+
+ATUALIZACAO VISUAL E EDUCATIVA
+------------------------------
+- Mosquitos redesenhados com asas animadas, olhos expressivos e listras brancas
+  nas pernas e no abdome, inspiradas nas marcas do Aedes aegypti.
+- Mosquito-mae redesenhado em tamanho maior, com asas batendo, pernas listradas,
+  abdome segmentado e voo orbital continuo ao redor do jogador.
+- Durante a batalha da onda 7, um poder Cruzeiro aparece apos alguns segundos
+  para ajudar o jogador com recuperacao de vida e spray reforcado.
+- Pneu redesenhado com borracha em camadas, sulcos, desgaste, cavidade profunda,
+  agua azul-esverdeada, reflexos, ondulacoes e folhas.
+- Licoes educativas agora aparecem em cartoes de alto contraste com o titulo
+  VOCE SABIA? e textos mais completos nas ondas 2 a 6.
+
+
+ATUALIZACAO DE INTERFACE - MENU E TELAS
+---------------------------------------
+- Menu inicial atualizado com a logo do jogo e botoes arcade verdes.
+- A tela de Informacoes foi reorganizada em topicos educativos.
+- Nova tela Configuracoes com volume geral, tela cheia e resolucao.
+- Telas de vitoria e derrota redesenhadas com botoes para jogar novamente
+  e voltar ao menu inicial.
+- Pausa durante a gameplay pela tecla ESC.
+- Fundo de menu reutilizado nas telas de navegacao para manter identidade.
+
+ATUALIZACAO VISUAL - AGENTE DO INSETICIDA E JATO
+------------------------------------------------
+- Novo visual do agente pulverizador em pixel art, com uniforme laranja/azul,
+  boné claro com símbolo laranja e mochila pulverizadora amarelo/laranja.
+- Animações próprias em quatro direções para andar e correr.
+- Animação de disparo refeita; a arma manual e a mochila de inseticida fazem
+  parte do desenho do personagem.
+- Animações redesenhadas para dano, coleta de kit, coleta do poder Cruzeiro
+  e derrota, mantendo a mesma identidade visual.
+- Jato do inseticida substituído por uma animação independente em quatro
+  quadros, com névoa branca/azul e pequenos respingos. O efeito acompanha
+  a direção do ataque.
+- Mantidos os valores de velocidade, alcance, dano, cooldown, vida, colisões,
+  controles e pontuação. O modo balde continua usando suas animações próprias.
+
+
+EFEITOS SONOROS (ATUALIZACAO)
+- Spray do jogador e impacto nos inimigos.
+- Derrota dos mosquitos e do Mosquito-mae.
+- Dano recebido pelo jogador.
+- Coleta de objetos, kit de vida e simbolo Cruzeiro.
+- Transicao de onda e alerta do chefe.
+- Coleta de balde e retirada de agua.
+- Sons de vitoria, derrota e botoes da interface.
+- O volume geral continua controlado pelo menu Configuracoes.
+
+
+ÁUDIO — ATUALIZAÇÃO
+- A música musica_menu_original.wav foi composta proceduralmente para este projeto, sem samples nem melodia de terceiros.
+- Os efeitos sonoros WAV existentes também são arquivos originais gerados para o jogo.
+- Na tela Configurações, os volumes de música e efeitos sonoros podem ser ajustados separadamente.

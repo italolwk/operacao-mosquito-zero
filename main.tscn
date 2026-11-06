@@ -56,7 +56,16 @@ offset_bottom = 572.0
 text = ""
 focus_mode = 0
 
+[node name="AreaCreditos" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 22.0
+offset_right = 204.0
+offset_bottom = 70.0
+text = "CRÉDITOS"
+focus_mode = 0
+
 [connection signal="pressed" from="AreaJogar" to="." method="_on_botaojogar_pressed"]
 [connection signal="pressed" from="AreaInformacoes" to="." method="_on_botao_informacoes_pressed"]
 [connection signal="pressed" from="AreaConfiguracoes" to="." method="_abrir_configuracoes"]
 [connection signal="pressed" from="AreaSair" to="." method="_sair"]
+[connection signal="pressed" from="AreaCreditos" to="." method="_abrir_creditos"]

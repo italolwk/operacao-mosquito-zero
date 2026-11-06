@@ -5,6 +5,7 @@ func _ready() -> void:
     OMZAudio.play_menu_music()
     for botao in [$AreaJogar, $AreaInformacoes, $AreaConfiguracoes, $AreaSair]:
         _preparar_area_clicavel(botao)
+    _preparar_botao_creditos($AreaCreditos)
 
 func _preparar_area_clicavel(botao: Button) -> void:
     botao.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
@@ -47,6 +48,38 @@ func _on_botao_informacoes_pressed() -> void:
 func _abrir_configuracoes() -> void:
     OMZAudio.play_sfx("botao", -5.0)
     get_tree().change_scene_to_file("res://configuracoes.tscn")
+
+func _abrir_creditos() -> void:
+    OMZAudio.play_sfx("botao", -5.0)
+    get_tree().change_scene_to_file("res://creditos.tscn")
+
+func _preparar_botao_creditos(botao: Button) -> void:
+    botao.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+    botao.focus_mode = Control.FOCUS_NONE
+    botao.add_theme_font_size_override("font_size", 17)
+    botao.add_theme_color_override("font_color", Color("#f5ffe7"))
+    botao.add_theme_color_override("font_hover_color", Color.WHITE)
+    botao.mouse_entered.connect(func(): OMZAudio.play_sfx("botao", -12.0))
+
+    var normal := StyleBoxFlat.new()
+    normal.bg_color = Color("#075b36")
+    normal.border_color = Color("#b6ff55")
+    normal.set_border_width_all(3)
+    normal.set_corner_radius_all(10)
+    normal.shadow_color = Color(0, 0, 0, 0.45)
+    normal.shadow_size = 5
+
+    var hover := normal.duplicate() as StyleBoxFlat
+    hover.bg_color = Color("#0b8a4a")
+    hover.border_color = Color("#efff9b")
+
+    var pressed := normal.duplicate() as StyleBoxFlat
+    pressed.bg_color = Color("#034226")
+
+    botao.add_theme_stylebox_override("normal", normal)
+    botao.add_theme_stylebox_override("hover", hover)
+    botao.add_theme_stylebox_override("pressed", pressed)
+    botao.add_theme_stylebox_override("focus", normal)
 
 func _sair() -> void:
     OMZAudio.play_sfx("botao", -5.0)
